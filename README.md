@@ -1,6 +1,6 @@
 # Azure Landing Zone - Terraform
 
-[![terraform-ci](../../actions/workflows/terraform-ci.yml/badge.svg)](../../actions/workflows/terraform-ci.yml)
+[![terraform-ci](https://github.com/NamanaPrasanth/azure-landing-zone-terraform/actions/workflows/terraform-ci.yml/badge.svg)](https://github.com/NamanaPrasanth/azure-landing-zone-terraform/actions/workflows/terraform-ci.yml)
 ![Terraform](https://img.shields.io/badge/Terraform-%E2%89%A5%201.11-7B42BC?logo=terraform)
 ![AzureRM](https://img.shields.io/badge/azurerm-4.x-0078D4?logo=microsoftazure)
 ![License](https://img.shields.io/badge/license-MIT-green)
