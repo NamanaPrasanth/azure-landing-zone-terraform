@@ -1,0 +1,15 @@
+formatter: markdown table
+sections:
+  hide: [modules, data-sources]
+output:
+  file: README.md
+  mode: inject
+sort:
+  enabled: true
+  by: required
+settings:
+  anchor: false
+  default: true
+  required: true
+  type: true
+  hide-empty: true

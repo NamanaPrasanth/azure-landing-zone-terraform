@@ -1,0 +1,5 @@
+resource_group_name  = "rg-tfstate"
+storage_account_name = "sttfstateXXXXXX"
+container_name       = "tfstate"
+key                  = "landing-zone/dev.tfstate"
+use_azuread_auth     = true

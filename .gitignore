@@ -1,0 +1,30 @@
+# Local .terraform directories
+**/.terraform/*
+
+# State files - state lives in Azure Storage, never in git
+*.tfstate
+*.tfstate.*
+*.tfplan
+tfplan
+plan.txt
+
+# Variable files may contain subscription IDs and secrets
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+backend.hcl
+
+# Crash logs and CLI overrides
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
+.DS_Store
+
+# Lock files are committed for root modules only
+modules/**/.terraform.lock.hcl

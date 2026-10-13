@@ -1,0 +1,23 @@
+# Checkov runs in CI on every push. Checks below are skipped on purpose;
+# each has a recorded reason so reviewers can see the trade-off.
+framework:
+  - terraform
+skip-check:
+  # Firewall IDPS "Deny" needs the Premium SKU (~2x the cost of Standard).
+  # Standard + threat intelligence in Deny mode is the dev baseline.
+  - CKV_AZURE_220
+  # Checkov only reads threat_intel_mode on the firewall resource itself;
+  # here it is set to Deny on the attached Firewall Policy instead.
+  - CKV_AZURE_216
+  # Dev cluster API server is reachable without a jump host. Production sets
+  # private_cluster_enabled = true or api_server_authorized_ip_ranges.
+  - CKV_AZURE_6
+  # Spokes use the hub firewall's DNS proxy as their single DNS endpoint;
+  # the firewall itself is zone-redundant.
+  - CKV_AZURE_182
+  # Same reason as CKV_AZURE_6 - private_cluster_enabled is a variable,
+  # left false in dev so the cluster is reachable for demos.
+  - CKV_AZURE_115
+  # Customer-managed keys (disk encryption set) are out of scope for dev;
+  # platform-managed keys plus encryption at host are used instead.
+  - CKV_AZURE_117

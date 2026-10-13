@@ -1,0 +1,25 @@
+# Copy to terraform.tfvars and fill in. terraform.tfvars is git-ignored.
+
+subscription_id = "00000000-0000-0000-0000-000000000000"
+owner           = "platform-team"
+cost_center     = "IT-1001"
+
+location       = "centralus"
+location_short = "cus"
+
+alert_emails = ["cloud-ops@example.com"]
+
+# Entra ID group that gets cluster-admin on AKS
+aks_admin_group_object_ids = []
+
+# Cost controls for a short-lived demo:
+#   firewall_enabled = false   # saves ~$1.25/hour
+#   aks_enabled      = false
+#   sentinel_enabled = false
+
+# Hybrid connectivity (gateway is billed hourly - keep off unless needed)
+expressroute_gateway_enabled = false
+# expressroute_circuit_id    = "/subscriptions/.../expressRouteCircuits/er-onprem"
+
+# Start in report-only mode, then switch to true once compliance looks clean
+policy_enforce = false
